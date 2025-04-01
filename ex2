@@ -1,0 +1,9 @@
+print("Welcome to polling booth")
+name, age, ward = input("Enter your name: "), int(input("Enter your age: ")), int(input("Enter your ward number (1-3): "))
+
+if age <= 0: print("Enter a valid age")
+elif age < 18: print(f"{name}, not eligible to vote")
+elif age < 60: print(f"{name}, eligible to vote. Room { {1:10, 2:12, 3:13}.get(ward, 'Invalid ward')}")
+else: print(f"{name}, consider postal vote due to heavy crowd")
+
+print("\t\tThanks for coming\nYou have exercised your democratic right")
