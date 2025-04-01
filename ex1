@@ -1,0 +1,8 @@
+def calculate(op, a, b):
+    return { '1': a + b, '2': a - b, '3': a * b, '4': a / b if b else "Cannot divide by zero" }.get(op, "Invalid operation")
+
+while True:
+    op = input("Select operation (1-4):\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\nEnter choice: ")
+    a, b = int(input("Enter first number: ")), int(input("Enter second number: "))
+    print("Result:", calculate(op, a, b))
+    if input("Continue? (y/n): ").lower() != 'y': break
