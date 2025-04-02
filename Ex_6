@@ -1,0 +1,25 @@
+import os
+
+path = r"D:\Lab"
+
+file_path = os.path.join(path, "sample.txt")
+
+os.makedirs(path, exist_ok=True)
+
+with open(file_path, "w") as file:
+
+file.write(input("Enter your text: "))
+
+print("\nFile Content:\n", open(file_path).read())
+
+if input("\nDelete directory? (yes/no): ").lower() == "yes":
+
+os.remove(file_path)
+
+os.rmdir(path)
+
+print("Directory deleted.")
+
+else:
+
+print("Directory not deleted.")
